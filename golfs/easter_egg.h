@@ -15,6 +15,7 @@ void g(f) {
 
 char * test_one_easter_egg(char c, char *expected) {
     char output[strlen(expected)*sizeof(char)];
+    memset(output, 0, strlen(expected)*sizeof(char));
     
     ASSERT_SUCCESS("easter_egg did not run successfully", CAPTURE_PRINT_OUTPUT(output, g, c));
     ASSERT_NOT_NULL("easter_egg output was null", output);

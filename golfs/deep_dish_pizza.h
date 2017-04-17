@@ -45,6 +45,7 @@ void deep_dish_pizza(n) {
 
 char * test_one_deep_dish_pizza(int n, char *expected) {
     char output[strlen(expected)*sizeof(char)];
+    memset(output, 0, strlen(expected)*sizeof(char));
     
     ASSERT_SUCCESS("deep_dish_pizza did not run successfully", CAPTURE_PRINT_OUTPUT(output, deep_dish_pizza, n));
     ASSERT_NOT_NULL("deep_dish_pizza output was null", output);
