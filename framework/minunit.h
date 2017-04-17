@@ -39,7 +39,7 @@
 
 #define RUN_TEST(test) do { char *message = test(); tests_run++; printf("\n"); if (message) return message; } while (0)
 
-// Redirect prints for testing
+// Redirect prints
 #define CAPTURE_RUN_OUTPUT(out,name,lang) test_file(name,lang,out)
 #define CAPTURE_PRINT_OUTPUT(out,func,args...) ({int ret,std_save=capture(out); func(args); ret=uncapture(std_save); ret;})
 
