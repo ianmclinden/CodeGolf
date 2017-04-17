@@ -14,14 +14,13 @@ void g(f) {
 }
 
 char * test_one_easter_egg(char c, char *expected) {
-    char *output = malloc(strlen(expected)*sizeof(char));
+    char output[strlen(expected)*sizeof(char)];
     
     ASSERT_SUCCESS("easter_egg did not run successfully", CAPTURE_PRINT_OUTPUT(output, g, c));
     ASSERT_NOT_NULL("easter_egg output was null", output);
     ASSERT_STRING_NOT_EMPTY("easter_egg output was empty", output);
     ASSERT_STRING_N_EQUAL("easter_egg did not have correct output", expected, output, strlen(expected));
     
-    free(output);
     return SUCCESS;
 }
 

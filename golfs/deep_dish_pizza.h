@@ -44,14 +44,13 @@ void deep_dish_pizza(n) {
 }
 
 char * test_one_deep_dish_pizza(int n, char *expected) {
-    char *output = malloc(strlen(expected)*sizeof(char));
+    char output[strlen(expected)*sizeof(char)];
     
     ASSERT_SUCCESS("deep_dish_pizza did not run successfully", CAPTURE_PRINT_OUTPUT(output, deep_dish_pizza, n));
     ASSERT_NOT_NULL("deep_dish_pizza output was null", output);
     ASSERT_STRING_NOT_EMPTY("deep_dish_pizza output was empty", output);
     ASSERT_STRING_N_EQUAL("deep_dish_pizza did not have correct output", expected, output, strlen(expected));
     
-    free(output);
     return SUCCESS;
 }
 

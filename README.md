@@ -88,7 +88,8 @@ static char * test_capture() {
     printf("test_capture():");
 
     // Create a string to capture the function's output
-    char *output = malloc(strlen(racecar)*sizeof(char));
+    char output[strlen(racecar)*sizeof(char)];
+    memset(output, 0, strlen(racecar)*sizeof(char));
 
     // Assert that the CAPTURE_PRINT_OUTPUT macro completed succesfully
     // This captures the output of r(1,9) as all arguments to CAPTURE_PRINT_OUTPUT after the function name
@@ -100,7 +101,6 @@ static char * test_capture() {
     ASSERT_STRING_NOT_EMPTY("Output was empty", output);
     ASSERT_STRING_N_EQUAL("Function did not have correct output", racecar, output, strlen(racecar));
 
-    free(output);
     return SUCCESS;
 }
 ```
@@ -137,7 +137,8 @@ static char * test_hellu() {
     printf("test_hellu():");
     
     // Create a string to capture the program's output
-    char *output = malloc(strlen(hellu)*sizeof(char));
+    char output[strlen(hellu)*sizeof(char)];
+    memset(output, 0,strlen(hellu)*sizeof(char));
 
     // Assert that the CAPTURE_PRINT_OUTPUT macro completed succesfully
     ASSERT_SUCCESS("File did not run successfully", CAPTURE_RUN_OUTPUT("hellu.py", PYTHON3_PATH, output));
@@ -147,7 +148,6 @@ static char * test_hellu() {
     ASSERT_STRING_NOT_EMPTY("Output was empty", output);
     ASSERT_STRING_N_EQUAL("File did not have correct output", hellu, output, strlen(hellu));
 
-    free(output);
     return SUCCESS;
 }
 ```
