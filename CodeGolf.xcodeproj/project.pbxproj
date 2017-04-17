@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4678D5F11EA4588000955E84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4678D5F01EA4588000955E84 /* main.c */; };
+		4678D5F91EA458B400955E84 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4678D5F81EA458B400955E84 /* README.md */; };
+		4678D6071EA4594700955E84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4678D5FB1EA458BF00955E84 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,19 @@
 
 /* Begin PBXFileReference section */
 		4678D5ED1EA4588000955E84 /* CodeGolf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeGolf; sourceTree = BUILT_PRODUCTS_DIR; };
-		4678D5F01EA4588000955E84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4678D5F71EA458B400955E84 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4678D5F81EA458B400955E84 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4678D5FB1EA458BF00955E84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4678D5FC1EA458BF00955E84 /* minunit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minunit.h; sourceTree = "<group>"; };
+		4678D5FE1EA458BF00955E84 /* chunk_reverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chunk_reverse.h; sourceTree = "<group>"; };
+		4678D5FF1EA458BF00955E84 /* deciph4r4ng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deciph4r4ng.h; sourceTree = "<group>"; };
+		4678D6001EA458BF00955E84 /* deep_dish_pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deep_dish_pizza.h; sourceTree = "<group>"; };
+		4678D6011EA458BF00955E84 /* easter_egg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easter_egg.h; sourceTree = "<group>"; };
+		4678D6021EA458BF00955E84 /* enciph5r47g.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enciph5r47g.h; sourceTree = "<group>"; };
+		4678D6031EA458BF00955E84 /* external_golfs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = external_golfs.h; sourceTree = "<group>"; };
+		4678D6041EA458BF00955E84 /* hellu.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = hellu.py; sourceTree = "<group>"; };
+		4678D6061EA458BF00955E84 /* statics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = statics.h; sourceTree = "<group>"; };
+		4678D6081EA459F900955E84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +54,12 @@
 		4678D5E41EA4588000955E84 = {
 			isa = PBXGroup;
 			children = (
-				4678D5EF1EA4588000955E84 /* CodeGolf */,
+				4678D6081EA459F900955E84 /* .gitignore */,
+				4678D5F71EA458B400955E84 /* LICENSE.txt */,
+				4678D5F81EA458B400955E84 /* README.md */,
+				4678D5FA1EA458BF00955E84 /* framework */,
+				4678D5FD1EA458BF00955E84 /* golfs */,
+				4678D6051EA458BF00955E84 /* statics */,
 				4678D5EE1EA4588000955E84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +72,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4678D5EF1EA4588000955E84 /* CodeGolf */ = {
+		4678D5FA1EA458BF00955E84 /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				4678D5F01EA4588000955E84 /* main.c */,
+				4678D5FB1EA458BF00955E84 /* main.c */,
+				4678D5FC1EA458BF00955E84 /* minunit.h */,
 			);
-			path = CodeGolf;
+			path = framework;
+			sourceTree = "<group>";
+		};
+		4678D5FD1EA458BF00955E84 /* golfs */ = {
+			isa = PBXGroup;
+			children = (
+				4678D5FE1EA458BF00955E84 /* chunk_reverse.h */,
+				4678D5FF1EA458BF00955E84 /* deciph4r4ng.h */,
+				4678D6001EA458BF00955E84 /* deep_dish_pizza.h */,
+				4678D6011EA458BF00955E84 /* easter_egg.h */,
+				4678D6021EA458BF00955E84 /* enciph5r47g.h */,
+				4678D6031EA458BF00955E84 /* external_golfs.h */,
+				4678D6041EA458BF00955E84 /* hellu.py */,
+			);
+			path = golfs;
+			sourceTree = "<group>";
+		};
+		4678D6051EA458BF00955E84 /* statics */ = {
+			isa = PBXGroup;
+			children = (
+				4678D6061EA458BF00955E84 /* statics.h */,
+			);
+			path = statics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4678D5F11EA4588000955E84 /* main.c in Sources */,
+				4678D6071EA4594700955E84 /* main.c in Sources */,
+				4678D5F91EA458B400955E84 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +290,7 @@
 				4678D5F61EA4588000955E84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
