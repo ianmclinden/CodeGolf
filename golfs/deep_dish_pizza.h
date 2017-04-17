@@ -43,12 +43,44 @@ void deep_dish_pizza(n) {
 
 }
 
+char * test_one_deep_dish_pizza(int n, char *expected) {
+    char *output = malloc(strlen(expected)*sizeof(char));
+    
+    ASSERT_SUCCESS("deep_dish_pizza did not run successfully", CAPTURE_PRINT_OUTPUT(output, deep_dish_pizza, n));
+    ASSERT_NOT_NULL("deep_dish_pizza output was null", output);
+    ASSERT_STRING_NOT_EMPTY("deep_dish_pizza output was empty", output);
+    ASSERT_STRING_N_EQUAL("deep_dish_pizza did not have correct output", expected, output, strlen(expected));
+    
+    free(output);
+    return SUCCESS;
+}
+
 static char * test_deep_dish_pizza() {
-    printf("test_deep_dish_pizza():\n");
-    int i;
-    for (i=1; i<=8; i++) {
-        printf("==== Pizza: N=%i ====\n",i);
-        deep_dish_pizza(i);
-    }
+    printf("test_deep_dish_pizza():");
+    
+    char *result = test_one_deep_dish_pizza(1, deep_dish_pizza_1);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(2, deep_dish_pizza_2);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(3, deep_dish_pizza_3);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(4, deep_dish_pizza_4);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(5, deep_dish_pizza_5);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(6, deep_dish_pizza_6);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(7, deep_dish_pizza_7);
+    if (result) return result;
+    
+    result = test_one_deep_dish_pizza(8, deep_dish_pizza_8);
+    if (result) return result;
+    
     return SUCCESS;
 }
