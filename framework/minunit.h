@@ -46,9 +46,9 @@
 extern int tests_run;
 int tests_run = 0;
 
-int test_file(char *f_name, char *ex_lang, char *f_output) {
-    char filepath[(strlen(ex_lang)+strlen(" ../")+strlen(f_name))*sizeof(char)];
-    sprintf(filepath, "%s ../%s",ex_lang,f_name);
+int test_file(char *f_name, char *ex_lang, char *f_output) {    
+    char filepath[(strlen(ex_lang)+strlen(" ./")+strlen(f_name))*sizeof(char)];
+    sprintf(filepath, "%s ./%s",ex_lang,f_name);
 
     FILE *fp = popen(filepath, "r");
     if (fp == NULL) {
