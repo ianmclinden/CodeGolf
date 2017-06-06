@@ -159,5 +159,21 @@ char cr_rev_n2_6[] = "aaaaaa";
 char cr_rev_n2_7[] = "abaaba";
 char cr_rev_n50_8[] = "abcdefgh";
 
+// Alternate Case
+char ac_pre_1[] = "ASCII";
+char ac_pre_2[] = "42";
+char ac_pre_3[] = "#include <iostream>";
+char ac_pre_4[] = "LEAVE_my_symbols#!#&^%_ALONE!!!";
+char ac_pre_5[] = "PPCG Rocks!!! For realz.";
+char ac_pre_6[] = "This example will start with uppercase";
+char ac_pre_7[] = "A1B2";
+
+char ac_post_1[] = "AsCiI";
+char ac_post_2[] = "42";
+char ac_post_3[] = "#InClUdE <iOsTrEaM>";
+char ac_post_4[] = "LeAvE_mY_sYmBoLs#!#&^%_AlOnE!!!";
+char ac_post_5[] = "PpCg RoCkS!!! fOr ReAlZ.";
+char ac_post_6[] = "ThIs ExAmPlE wIlL sTaRt WiTh UpPeRcAsE";
+char ac_post_7[] = "A1b2";
 
 #endif /* statics_h */

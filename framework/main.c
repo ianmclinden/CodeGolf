@@ -15,6 +15,7 @@
 #include "deciph4r4ng.h"
 #include "easter_egg.h"
 #include "chunk_reverse.h"
+#include "alternate_case.h"
 
 /*
  * Main Test List -- Enable all tests you want to run here.
@@ -25,7 +26,8 @@ static char * all_tests() {
     RUN_TEST(test_deciph4r4ng);
     RUN_TEST(test_easter_egg);
     RUN_TEST(test_hellu);
-    RUN_TEST(test_chunk_reverse);
+//    RUN_TEST(test_chunk_reverse);
+//    RUN_TEST(test_alternate_case);
     return SUCCESS;
 }
 

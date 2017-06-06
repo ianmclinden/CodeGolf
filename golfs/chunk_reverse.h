@@ -9,7 +9,7 @@
 // https://codegolf.stackexchange.com/questions/116550/reverse-a-string-by-chunks
 
 void chunk_reverse(char *s, int n) {
-    s[0] = 'a';
+    // TODO : 
 }
 
 char * test_one_chunk_reverse(char *msg, char *str, int n, char *rev) {
