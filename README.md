@@ -140,7 +140,7 @@ static char * test_hellu() {
     memset(output, 0,strlen(hellu)*sizeof(char));
 
     // Assert that the CAPTURE_PRINT_OUTPUT macro completed succesfully
-    ASSERT_SUCCESS("File did not run successfully", CAPTURE_RUN_OUTPUT("hellu.py", PYTHON3_PATH, output));
+    ASSERT_SUCCESS("File did not run successfully", CAPTURE_RUN_OUTPUT("golfs/hellu.py", PYTHON3_PATH, output));
 
     // Assert that we got some output, and that it matches
     ASSERT_NOT_NULL("Output was null", output);

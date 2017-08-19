@@ -6,19 +6,20 @@
 //  Copyright © 2017 Ian McLinden. All rights reserved.
 //
 
-// Framework imports
 #include <stdio.h>
-#include "minunit.h"
-#include "test_values.h"
+
+// Framework importss
+#include "framework/minunit.h"
+#include "framework/test_values.h"
 
 // Golfs
-#include "deep_dish_pizza.h"
-#include "enciph5r47g.h"
-#include "deciph4r4ng.h"
-#include "easter_egg.h"
-#include "hellu.h"
-#include "chunk_reverse.h"
-#include "alternate_case.h"
+#include "golfs/deep_dish_pizza.h"
+#include "golfs/enciph5r47g.h"
+#include "golfs/deciph4r4ng.h"
+#include "golfs/easter_egg.h"
+#include "golfs/hellu.h"
+#include "golfs/chunk_reverse.h"
+#include "golfs/alternate_case.h"
 
 /*
  * Main Test List -- Enable all golfs you want to run here.
