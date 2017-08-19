@@ -18,6 +18,10 @@
 #define SUCCESS (0)
 #define FAILURE (-1)
 
+// Program paths for external build systems
+#define PYTHON2_PATH "/Library/Frameworks/Python.framework/Versions/2.7/bin/python"
+#define PYTHON3_PATH "/Library/Frameworks/Python.framework/Versions/3.5/bin/python3"
+
 // Based on Jera's MinUnit C Test Framework -- http://www.jera.com/techinfo/jtns/jtn002.html
 #define ASSERT(message, test) do { int result=test; printf("%s",(result?"+":"-")); if (!result) return message; } while (0)
 #define ASSERT_SUCCESS(msg,var)                         ASSERT(msg, var==SUCCESS)

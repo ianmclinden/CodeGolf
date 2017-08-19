@@ -6,8 +6,8 @@
 //  Copyright © 2017 Ian McLinden. All rights reserved.
 //
 
-#ifndef statics_h
-#define statics_h
+#ifndef test_values_h
+#define test_values_h
 
 // enciph5r47g and deciph4r4ng
 char plaintext_1[] = "abcd";
@@ -176,4 +176,4 @@ char ac_post_5[] = "PpCg RoCkS!!! fOr ReAlZ.";
 char ac_post_6[] = "ThIs ExAmPlE wIlL sTaRt WiTh UpPeRcAsE";
 char ac_post_7[] = "A1b2";
 
-#endif /* statics_h */
+#endif /* test_values_h */

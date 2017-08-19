@@ -15,7 +15,7 @@ Golfed functions are defined one-per-file, in C header files. The file includes 
 Static Test Values:
 ---
 
-The file `statics.h` is provided to store static test values such as strings, integers, etc. This keeps the golf files compact.
+The file `test_values.h` is provided to store static test values such as strings, integers, etc. This keeps the golf files compact.
 
 Automated C Testing:
 ---
@@ -72,7 +72,7 @@ Automated Testing of 'Print-Only' Functions:
 
 Sometimes a golf requires only printing the value. In this case, the framework provides a way of testing a print-only function. The following example illustrates automated validation of the golf 'challenge' of printing "racecar" plus two numbers to standard out. 
 
-In `statics.h` we'll add our expected output string.
+In `test_values.h` we'll add our expected output string.
 ```C
 char racecar[] = "racecar19";
 ```
@@ -124,14 +124,13 @@ In `hellu.py` we'll write our golf script.
 print("hellu?")
 ```
 
-In `statics.h` we'll add our expected output string
+In `test_values.h` we'll add our expected output string
 ```C
 char hellu[] = "hellu?";
 ```
 
-In `external_golfs.h` we'll define our external build path (for python3), and automated tests.
+In `hellu.h` we'll define our automated tests, using the PYTHON3_PATH defined in minunit.h
 ```C
-#define PYTHON3_PATH "/usr/bin/python3"
 
 static char * test_hellu() {
     printf("test_hellu():");
@@ -152,7 +151,7 @@ static char * test_hellu() {
 }
 ```
 
-Finally, in `main.c` we'll include `test_hellu()` like any other automated test.
+Finally, in `main.c` we'll include `hellu.h` and `test_hellu()` like any other automated test.
 ```C
 static char * all_tests() {
     RUN_TEST(test_hellu);

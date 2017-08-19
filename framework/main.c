@@ -6,19 +6,22 @@
 //  Copyright © 2017 Ian McLinden. All rights reserved.
 //
 
+// Framework imports
 #include <stdio.h>
 #include "minunit.h"
-#include "statics.h"
-#include "external_golfs.h"
+#include "test_values.h"
+
+// Golfs
 #include "deep_dish_pizza.h"
 #include "enciph5r47g.h"
 #include "deciph4r4ng.h"
 #include "easter_egg.h"
+#include "hellu.h"
 #include "chunk_reverse.h"
 #include "alternate_case.h"
 
 /*
- * Main Test List -- Enable all tests you want to run here.
+ * Main Test List -- Enable all golfs you want to run here.
  */
 static char * all_tests() {
     RUN_TEST(test_deep_dish_pizza);

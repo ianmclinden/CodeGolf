@@ -1,14 +1,10 @@
 //
-//  external_golfs.h
+//  hellu.h
 //  CodeGolf
 //
 //  Created by Ian McLinden on 4/16/17.
 //  Copyright © 2017 Ian McLinden. All rights reserved.
 //
-
-// Program Paths for extermnal build systems
-#define PYTHON2_PATH "/Library/Frameworks/Python.framework/Versions/2.7/bin/python"
-#define PYTHON3_PATH "/Library/Frameworks/Python.framework/Versions/3.5/bin/python3"
 
 // Define a file run test for each external script
 
